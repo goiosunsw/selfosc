@@ -4,7 +4,7 @@ from setuptools import setup
 import unittest
 def my_tests():
     test_loader = unittest.TestLoader()
-    test_suite = test_loader.discover('tests', pattern='test_*.py')
+    test_suite = test_loader.discover('test', pattern='test_*.py')
     return test_suite
 
 setup(name='selfosc',
@@ -15,6 +15,7 @@ setup(name='selfosc',
       author_email='a.almeida@unsw.edu.au',
       license='GPL v3',
       packages=['selfosc' ],
-      test_suite = 'setup.my_tests',
+      #test_suite = 'setup.my_tests',
+      test_suite = 'test',
       zip_safe=False)
 
